@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fligh Ticket Booking System </title>
+    <link rel="icon" type="image/x-icon" href="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?cs=srgb&dl=pexels-pixabay-46148.jpg&fm=jpg">
+    <style>
+        
+h1 {text-align: center;
+    font-size: 45px;}
+    div {text-align: center;}
+    .button {
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.open-button {
+  border: none;
+  color: white;
+  padding: 15px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.open-button {background-color: #c56627;}
+.button2 {background-color: #cc6d14;}
+.button3 {background-color: #c99a36;}
+.button4 {background-color: rgb(209, 133, 32);
+    border-style: solid;
+  border-width: thin;
+  }
+  
+  .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+/*.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}*/
+body {
+  background-image: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>BOOK TICKET</h1>
+    </div>
+    <div>
+        <h3>Select your destination</h3><label for="From">From:</label>
+        <select id="From" name="Fromlist" form="Fromlist">
+          <option value="volvo"></option>
+          <option value="A">Amritsar</option>
+          <option value="B">Boston</option>
+          <option value="C">Canada</option>
+          <option value="D">Dubai</option>
+          <option value="F">France</option>
+        </select>
+        <label for="to"> To</label>
+        <select id="to" name="tolist" form="toist">
+          <option value="volvo"></option>
+          <option value="A">Amritsar</option>
+          <option value="B">Boston</option>
+          <option value="C">Canada</option>
+          <option value="D">Dubai</option>
+          <option value="F">France</option>
+          </select>
+    </div>
+    <br>
+    <button class="open-button" onclick="openForm()">Book ticket</button>
+    <div class="form-popup" id="myForm">
+       
+            <form action="/action_page.php" class="form-container"> 
+                <br><br>
+                <label for="Date">Date:</label>
+                <input type="date" id="Date" name="Date" required>
+                <br><br>
+                <label for="phone">Enter a mobile number:</label><br><br>
+                <input type="tel" id="phone" name="phone" placeholder="1234567892" required><br><br>
+                <label for="seat">Select seat:</label>
+<select id="seat" name="seatlist" form="seatlist">
+  <option value="volvo"></option>
+  <option value="A">A1<br>
+    A2<br>
+    A3<br>
+    A4<br>
+    A5<br>
+    A6<br>
+</option>
+  <option value="B">B1<br>
+    B2<br>
+    B3<br>
+    B4<br>
+    B5<br>
+    B6<br>
+</option>
+  <option value="audi">Audi</option>
+</select>
+    <button type="submit" class="btn">submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </div>
+    <div2>
+        <button class = "button button2" type="button" onclick="alert('Option coming soon!')">Update</button>
+    </div2>
+    <div3>
+        <button class = "button button3" type="button" onclick="alert('Option coming soon!')">Edit</button>
+    </div3>
+    <div4>
+      <button class = "button button4" type="button" onclick="check()">Check Booking</button>
+  </div4>
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        function check() {
+          location.replace("file:///C:/Users/RAHUL%20SUYAL/Desktop/assignament/checkbooking.html")
+        }
+
+        </script>
+
+    
+</body>
+</html>
